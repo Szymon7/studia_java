@@ -17,7 +17,5 @@ public class Units {
         System.out.println(foot + " stop");
         System.out.println(yard + " jardow");
         System.out.println(miles + " mil");
-
-        scanner.close();
     }
 }

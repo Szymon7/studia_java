@@ -13,7 +13,6 @@ public class Calculator {
         System.out.println("Podaj droga liczbe: ");
         double b = scanner.nextDouble();
         scanner.nextLine();
-        scanner.close();
 
         System.out.println("Wynik: ");
 

@@ -12,17 +12,17 @@ public class Main {
             System.out.println("3. Za duzo za malo");
             System.out.println("4. Oblicz przychody");
             System.out.println("5. Program sedziowski");
-            System.out.println("\nSelect program: ");
+            System.out.println("0. Exit");
+            System.out.print("\nSelect program: ");
 
-            try {
-                selectedProgram = scanner.nextInt();
-            } catch (Exception e) {
-                scanner.nextInt();
+            if (!scanner.hasNextInt()) {
                 System.out.println("Invalid input. Please enter an integer.");
+                scanner.next();
                 System.out.println("\n==========================================\n");
                 continue;
             }
 
+            selectedProgram = scanner.nextInt();
             System.out.println("\n=============================\n");
 
             switch (selectedProgram) {
