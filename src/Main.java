@@ -10,6 +10,8 @@ public class Main {
             System.out.println("1. Convert meters");
             System.out.println("2. Kalkulator");
             System.out.println("3. Za duzo za malo");
+            System.out.println("4. Oblicz przychody");
+            System.out.println("5. Program sedziowski");
             System.out.println("\nSelect program: ");
 
             try {
@@ -32,6 +34,12 @@ public class Main {
                     break;
                 case 3:
                     TooMuchTooLittle.run();
+                    break;
+                case 4:
+                    Balance.run();
+                    break;
+                case 5:
+                    JudgesScores.run();
                     break;
                 case 0:
                     System.out.println("Exiting program...");
