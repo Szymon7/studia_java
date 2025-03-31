@@ -3,53 +3,55 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int selectedProgram;
 
         while (true) {
-            System.out.println("MENU: ");
-            System.out.println("1. Convert meters");
-            System.out.println("2. Kalkulator");
-            System.out.println("3. Za duzo za malo");
-            System.out.println("4. Oblicz przychody");
-            System.out.println("5. Program sedziowski");
-            System.out.println("0. Exit");
-            System.out.print("\nSelect program: ");
-
-            if (!scanner.hasNextInt()) {
-                System.out.println("Invalid input. Please enter an integer.");
-                scanner.next();
-                System.out.println("\n==========================================\n");
-                continue;
-            }
-
-            selectedProgram = scanner.nextInt();
-            System.out.println("\n=============================\n");
-
-            switch (selectedProgram) {
-                case 1:
-                    Units.run();
-                    break;
-                case 2:
-                    Calculator.run();
-                    break;
-                case 3:
-                    TooMuchTooLittle.run();
-                    break;
-                case 4:
-                    Balance.run();
-                    break;
-                case 5:
-                    JudgesScores.run();
-                    break;
-                case 0:
-                    System.out.println("Exiting program...");
-                    return;
-                default:
-                    System.out.println("Invalid option. Please try again.");
-                    break;
-            }
-
-            System.out.println("\n==========================================\n");
+            showMenu();
+            int selectedProgram = getUserInput(scanner);
+            if (selectedProgram == -1) continue;
+            if (selectedProgram == 0) break;
+            executeProgram(selectedProgram);
         }
+
+        System.out.println("Exiting program...");
+        scanner.close();
+    }
+
+    private static void showMenu() {
+        System.out.println("MENU: ");
+        System.out.println("1. Convert meters");
+        System.out.println("2. Kalkulator");
+        System.out.println("3. Za duzo za malo");
+        System.out.println("4. Oblicz przychody");
+        System.out.println("5. Program sedziowski");
+        System.out.println("0. Exit");
+        System.out.print("\nSelect program: ");
+    }
+
+    private static int getUserInput(Scanner scanner) {
+        if (!scanner.hasNext()) {
+            System.out.println("No input detected. Exiting...");
+            return 0;
+        }
+
+        String input = scanner.next();
+        try {
+            return Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter an integer.\n");
+            return -1;
+        }
+    }
+
+    private static void executeProgram(int selectedProgram) {
+        System.out.println("\n=============================\n");
+        switch (selectedProgram) {
+            case 1 -> Units.run();
+            case 2 -> Calculator.run();
+            case 3 -> TooMuchTooLittle.run();
+            case 4 -> Balance.run();
+            case 5 -> JudgesScores.run();
+            default -> System.out.println("Invalid option. Please try again.");
+        }
+        System.out.println("\n==========================================\n");
     }
 }
