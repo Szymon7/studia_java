@@ -24,6 +24,9 @@ public class Main {
         System.out.println("5. Program sedziowski");
         System.out.println("6. Figury Plaskie");
         System.out.println("7. Figury ASCII");
+        System.out.println("8. Uklad rownan");
+        System.out.println("9. Macierze");
+        System.out.println("10. Oblicz przychody (tablicami)");
         System.out.println("0. Exit");
         System.out.print("\nSelect program: ");
     }
@@ -53,6 +56,9 @@ public class Main {
             case 5 -> JudgesScores.run();
             case 6 -> FiguryPlaskie.run();
             case 7 -> FiguryASCII.run();
+            case 8 -> UkladRownan.run();
+            case 9 -> Macierze.run();
+            case 10 -> BalanceUsingArrays.run();
             default -> System.out.println("Invalid option. Please try again.");
         }
         System.out.println("\n==========================================\n");
