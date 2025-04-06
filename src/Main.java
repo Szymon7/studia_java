@@ -13,7 +13,6 @@ public class Main {
         }
 
         System.out.println("Exiting program...");
-        scanner.close();
     }
 
     private static void showMenu() {
@@ -23,6 +22,8 @@ public class Main {
         System.out.println("3. Za duzo za malo");
         System.out.println("4. Oblicz przychody");
         System.out.println("5. Program sedziowski");
+        System.out.println("6. Figury Plaskie");
+        System.out.println("7. Figury ASCII");
         System.out.println("0. Exit");
         System.out.print("\nSelect program: ");
     }
@@ -50,6 +51,8 @@ public class Main {
             case 3 -> TooMuchTooLittle.run();
             case 4 -> Balance.run();
             case 5 -> JudgesScores.run();
+            case 6 -> FiguryPlaskie.run();
+            case 7 -> FiguryASCII.run();
             default -> System.out.println("Invalid option. Please try again.");
         }
         System.out.println("\n==========================================\n");
