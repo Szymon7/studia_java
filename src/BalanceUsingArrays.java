@@ -114,7 +114,7 @@ public class BalanceUsingArrays {
         System.out.println("6. Maksymalny i minimalny dochód");
         System.out.println("7. Sortuj dochody");
         System.out.println("8. Dochody poniżej i powyżej średniego");
-        System.out.println("9. Exit");
+        System.out.println("0. Exit");
         System.out.print("Choose an option: ");
     }
 
@@ -153,7 +153,7 @@ public class BalanceUsingArrays {
                 case 8:
                     pod_nad_srednim_dochodem(income);
                     break;
-                case 9:
+                case 0:
                     System.out.println("Exiting...");
                     break;
                 default:
