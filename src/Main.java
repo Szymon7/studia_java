@@ -31,6 +31,7 @@ public class Main {
         System.out.println("10. Oblicz przychody (tablicami)");
         System.out.println("11. Operacje na napisach");
         System.out.println("12. Liczby wymierne");
+        System.out.println("13. Operacje na plikach");
         System.out.println("0. Exit");
         System.out.print("\nSelect program: ");
     }
@@ -65,6 +66,7 @@ public class Main {
             case 10 -> BalanceUsingArrays.run();
             case 11 -> StringOperations.run();
             case 12 -> Rational.run();
+            case 13 -> Files.run();
             default -> System.out.println("Invalid option. Please try again.");
         }
         System.out.println("\n==========================================\n");
