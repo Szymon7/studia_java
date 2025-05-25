@@ -1,0 +1,10 @@
+mleko 3.5 50
+chleb 3.7800000000000002 120
+jajka 7.2 200
+masło 6.5 30
+cukier 5.22 150
+mąka 2.3 80
+dżem 7.1 60
+ser 11.16 110
+woda 1.08 200
+herbata 15.9 40
